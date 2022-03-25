@@ -1,0 +1,19 @@
+LidarLimitHeight, LidarLimitWidth, LidarLimitLength, LidarReadingHeight, LidarReadingWidth, LidarReadingLength, LidarOverHeight, LidarOverWidth, LidarOverLength, LidarPercentageHeight, LidarPercentageWidth, LidarPercentageLength
+
+
+Weight_wim, Speed, OverWeight, LimitWeight, OverWeight, WeighingDateTime
+
+
+SELECT LidarLimitHeight, LidarLimitWidth, LidarLimitLength, LidarReadingHeight, LidarReadingWidth, 
+LidarReadingLength, LidarOverHeight, LidarOverWidth, LidarOverLength, LidarPercentageHeight, LidarPercentageWidth, 
+LidarPercentageLength FROM lidar
+
+SELECT Weight_wim, Speed, OverWeight, LimitWeight, OverWeight, WeighingDateTime FROM wim
+
+ALTER TABLE 
+
+
+SELECT LidarLimitHeight, LidarLimitWidth, LidarLimitLength, LidarReadingHeight, LidarReadingWidth, 
+LidarReadingLength, LidarOverHeight, LidarOverWidth, LidarOverLength, LidarPercentageHeight, LidarPercentageWidth, 
+LidarPercentageLength, Weight_wim, Speed, OverWeight, LimitWeight, OverWeight, WeighingDateTime FROM lidar INNER JOIN wim ON lidar.wim_id = wim.id
+
